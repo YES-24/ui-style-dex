@@ -37,7 +37,10 @@
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.6}
 .wrap{max-width:1180px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.1;margin:0;letter-spacing:-.01em;text-wrap:balance}
-.lead{margin:10px 0 0;color:var(--muted);max-width:62ch}
+.lead{margin:10px 0 0;color:var(--muted);max-width:44em}
+.lead span{display:block;text-wrap:balance} .lead span:last-child{display:inline}
+body{word-break:keep-all}
+:is(p,li,.use,.pick p,.info p){text-wrap:pretty}
 h2{font-size:18px;margin:0 0 12px}
 
 .picks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
@@ -400,7 +403,7 @@ h2,h3,.pick a{font-family:var(--display);letter-spacing:-.015em} h1{letter-spaci
   <header class="hero">
     <span class="eyebrow">UI STYLE GUIDE</span>
     <h1>UI 스타일 도감</h1>
-    <p class="lead">AI에게 "예쁘게 만들어 줘"라고 하면 다 비슷하게 나와요. 스타일 이름으로 주문하면 원하는 느낌이 훨씬 정확하게 나와요. 마음에 드는 견본을 찾고, 아래 영어 키워드를 복사해 주문문에 붙이세요.</p>
+    <p class="lead"><span>AI에게 "예쁘게 만들어 줘"라고 하면 다 비슷하게 나와요.</span> <span>스타일 이름으로 주문하면 원하는 느낌이 훨씬 정확하게 나와요.</span> <span>마음에 드는 견본을 찾고, 아래 영어 키워드를 복사해 주문문에 붙이세요.</span></p>
     <div class="count"><span>스타일 <b>28</b>종</span><span>견본은 이미지 없이 CSS로만 그렸어요</span><span>견본을 누르면 이 페이지가 그 스타일로 바뀌어요</span></div>
   </header>
 
